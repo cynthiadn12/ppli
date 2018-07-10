@@ -53,7 +53,8 @@ Route::group(['middleware' => ['web', 'auth']], function(){
     Route::resource('measurement-management', 'MeasurementManagementController');
 
     Route::resource('purchase-proposal', 'PurchaseProposalController');
-    //Route::get('purchase-proposal/create/{id}', 'PurchaseProposalController@create')->name('purchase-proposal.create.id');
+//    Route::get('purchase-proposal/create/{id}', 'PurchaseProposalController@test')->name('purchase-proposal.create.id');
+    Route::get('purchase-proposal/create/{id}','PurchaseProposalController@test');
 
     Route::post('sourcing-dashboard/search', 'SourcingDashboardController@search')->name('sourcing-dashboard.search');
     Route::resource('sourcing-dashboard', 'SourcingDashboardController');

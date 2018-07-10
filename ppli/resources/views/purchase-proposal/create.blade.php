@@ -7,6 +7,21 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Create Purchase Proposal</div>
                     <div class="panel-body">
+
+                        <div class="form-group">
+                            <label><h3>Data Source</h3></label><br>
+                            <label>ID : {{$data->id}}</label><br>
+                            <label>Loc Leve1 : {{$data->id_loc_lvl1}}</label><br>
+                            <label>Loc Level2 : {{$data->id_loc_lvl2}}</label><br>
+                            <label>Vendor : {{$data->id_vendor}}</label><br>
+                            <label>Fish : {{$data->id_fish}}</label><br>
+                            <label>QTY : {{$data->qty}}</label><br>
+                            <label>Measurement : {{$data->id_measurement}}</label><br>
+                            <label>Price : {{$data->price}}</label><br>
+                            <label>Valid Until : {{$data->valid_until}}</label><br>
+                        </div>
+
+
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('purchase-proposal.store') }}">
                             {{ csrf_field() }}
 

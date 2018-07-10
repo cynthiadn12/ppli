@@ -43,13 +43,14 @@ class PurchaseProposalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function test($id)
     {
-        //var_dump('testing');
-        //die();
+//        var_dump('testing', $id);
+        $source = Sourcing::find($id);
+//        die($source);
         $measurements = Measurement::all();
         $sources = Sourcing::all();
-        return view('purchase-proposal/create', ['sources' => $sources], ['measurements' => $measurements]);
+        return view('purchase-proposal/create', ['sources' => $sources], ['measurements' => $measurements])->with('data',$source);
     }
 
     /**

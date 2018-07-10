@@ -48,7 +48,7 @@
                                         <form class="row" method="POST" action="{{ route('sourcing-dashboard.destroy', ['id' => $item->id]) }}" onsubmit = "return confirm('Are you sure?')">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">&nbsp&nbsp&nbsp
-                                            <a href="{{ route('purchase-proposal.create', ['id' => $item->id]) }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+                                            <a href="{{ URL::to('purchase-proposal/create/'.$item->id) }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>
                                             <a href="{{ route('sourcing-dashboard.edit', ['id' => $item->id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
                                             {{--@if ($user->name != Auth::user()->name)--}}
                                             <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
