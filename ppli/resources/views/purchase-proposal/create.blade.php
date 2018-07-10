@@ -18,7 +18,7 @@
                             <label>QTY : {{$data->qty}}</label><br>
                             <label>Measurement : {{$data->id_measurement}}</label><br>
                             <label>Price : {{$data->price}}</label><br>
-                            <label>Valid Until : {{$data->valid_until}}</label><br>
+                            <label>ID : {{$data->valid_until}}</label><br>
                         </div>
 
 
